@@ -1,0 +1,15 @@
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\ZimaSharp\bin\Debug\net5.0-windows\ZimaSharp.deps.json
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\ZimaSharp\bin\Debug\net5.0-windows\ZimaSharp.dll
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\ZimaSharp\bin\Debug\net5.0-windows\ref\ZimaSharp.dll
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\ZimaSharp\bin\Debug\net5.0-windows\ZimaSharp.pdb
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\ZimaSharp\obj\Debug\net5.0-windows\ZimaSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\ZimaSharp\obj\Debug\net5.0-windows\ZimaSharp.AssemblyInfoInputs.cache
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\ZimaSharp\obj\Debug\net5.0-windows\ZimaSharp.AssemblyInfo.cs
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\ZimaSharp\obj\Debug\net5.0-windows\ZimaSharp.csproj.CoreCompileInputs.cache
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\ZimaSharp\obj\Debug\net5.0-windows\ZimaSharp.dll
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\ZimaSharp\obj\Debug\net5.0-windows\ref\ZimaSharp.dll
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\ZimaSharp\obj\Debug\net5.0-windows\ZimaSharp.pdb
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\ZimaSharp\obj\Debug\net5.0-windows\ZimaSharp.csproj.AssemblyReference.cache
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\ZimaSharp\bin\Debug\net5.0-windows\SQLiteController.dll
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\ZimaSharp\bin\Debug\net5.0-windows\SQLiteController.pdb
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\ZimaSharp\obj\Debug\net5.0-windows\ZimaSharp.csproj.CopyComplete

@@ -1,0 +1,12 @@
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\SQLiteController\bin\Release\net5.0\SQLiteController.deps.json
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\SQLiteController\bin\Release\net5.0\SQLiteController.dll
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\SQLiteController\bin\Release\net5.0\ref\SQLiteController.dll
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\SQLiteController\bin\Release\net5.0\SQLiteController.pdb
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\SQLiteController\obj\Release\net5.0\SQLiteController.csproj.AssemblyReference.cache
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\SQLiteController\obj\Release\net5.0\SQLiteController.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\SQLiteController\obj\Release\net5.0\SQLiteController.AssemblyInfoInputs.cache
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\SQLiteController\obj\Release\net5.0\SQLiteController.AssemblyInfo.cs
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\SQLiteController\obj\Release\net5.0\SQLiteController.csproj.CoreCompileInputs.cache
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\SQLiteController\obj\Release\net5.0\SQLiteController.dll
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\SQLiteController\obj\Release\net5.0\ref\SQLiteController.dll
+C:\Users\YASUFUKU_YOSUKE\Documents\zimagon\source\ZimaTextTest\SQLiteController\obj\Release\net5.0\SQLiteController.pdb

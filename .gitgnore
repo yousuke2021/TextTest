@@ -1,0 +1,5 @@
+*.txt
+*.cache
+*.suo
+*.editorconfig
+/.vs/

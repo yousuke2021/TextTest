@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "G4bMwxV8Khz1LKvIYaU6S/ahx3715Rz7KjwVECDo1397YE3UDl+xCe8CgpaEkEsBA0cqHqsyJTOWVKZJtuwQCw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\YASUFUKU_YOSUKE\\Documents\\zimagon\\source\\ZimaTextTest\\SQLiteController\\SQLiteController.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\YASUFUKU_YOSUKE\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.114.3\\stub.system.data.sqlite.core.netstandard.1.0.114.3.nupkg.sha512",
+    "C:\\Users\\YASUFUKU_YOSUKE\\.nuget\\packages\\system.data.sqlite.core\\1.0.114.3\\system.data.sqlite.core.1.0.114.3.nupkg.sha512"
+  ],
+  "logs": []
+}

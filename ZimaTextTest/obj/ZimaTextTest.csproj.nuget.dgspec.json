@@ -1,0 +1,187 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\YASUFUKU_YOSUKE\\Documents\\zimagon\\source\\ZimaTextTest\\ZimaTextTest\\ZimaTextTest.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\YASUFUKU_YOSUKE\\Documents\\zimagon\\source\\ZimaTextTest\\SQLiteController\\SQLiteController.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\YASUFUKU_YOSUKE\\Documents\\zimagon\\source\\ZimaTextTest\\SQLiteController\\SQLiteController.csproj",
+        "projectName": "SQLiteController",
+        "projectPath": "C:\\Users\\YASUFUKU_YOSUKE\\Documents\\zimagon\\source\\ZimaTextTest\\SQLiteController\\SQLiteController.csproj",
+        "packagesPath": "C:\\Users\\YASUFUKU_YOSUKE\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\YASUFUKU_YOSUKE\\Documents\\zimagon\\source\\ZimaTextTest\\SQLiteController\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\YASUFUKU_YOSUKE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "System.Data.SQLite.Core": {
+              "target": "Package",
+              "version": "[1.0.114.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\YASUFUKU_YOSUKE\\Documents\\zimagon\\source\\ZimaTextTest\\ZimaSharp\\ZimaSharp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\YASUFUKU_YOSUKE\\Documents\\zimagon\\source\\ZimaTextTest\\ZimaSharp\\ZimaSharp.csproj",
+        "projectName": "ZimaSharp",
+        "projectPath": "C:\\Users\\YASUFUKU_YOSUKE\\Documents\\zimagon\\source\\ZimaTextTest\\ZimaSharp\\ZimaSharp.csproj",
+        "packagesPath": "C:\\Users\\YASUFUKU_YOSUKE\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\YASUFUKU_YOSUKE\\Documents\\zimagon\\source\\ZimaTextTest\\ZimaSharp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\YASUFUKU_YOSUKE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {
+              "C:\\Users\\YASUFUKU_YOSUKE\\Documents\\zimagon\\source\\ZimaTextTest\\SQLiteController\\SQLiteController.csproj": {
+                "projectPath": "C:\\Users\\YASUFUKU_YOSUKE\\Documents\\zimagon\\source\\ZimaTextTest\\SQLiteController\\SQLiteController.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\YASUFUKU_YOSUKE\\Documents\\zimagon\\source\\ZimaTextTest\\ZimaTextTest\\ZimaTextTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\YASUFUKU_YOSUKE\\Documents\\zimagon\\source\\ZimaTextTest\\ZimaTextTest\\ZimaTextTest.csproj",
+        "projectName": "ZimaTextTest",
+        "projectPath": "C:\\Users\\YASUFUKU_YOSUKE\\Documents\\zimagon\\source\\ZimaTextTest\\ZimaTextTest\\ZimaTextTest.csproj",
+        "packagesPath": "C:\\Users\\YASUFUKU_YOSUKE\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\YASUFUKU_YOSUKE\\Documents\\zimagon\\source\\ZimaTextTest\\ZimaTextTest\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\YASUFUKU_YOSUKE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {
+              "C:\\Users\\YASUFUKU_YOSUKE\\Documents\\zimagon\\source\\ZimaTextTest\\ZimaSharp\\ZimaSharp.csproj": {
+                "projectPath": "C:\\Users\\YASUFUKU_YOSUKE\\Documents\\zimagon\\source\\ZimaTextTest\\ZimaSharp\\ZimaSharp.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+﻿<Window x:Class="ZimaTextTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZimaTextTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBox Grid.Column="0" FontSize="20" Padding="5" TextWrapping="Wrap" TextChanged="TextBox_TextChanged" x:Name="TextBox1"  BorderThickness="0"/>
+        <TextBlock Grid.Column="1" FontSize="20" Padding="5" TextWrapping="Wrap" x:Name="ChangedText" Background="Gray" Foreground="White"/>
+    </Grid>
+</Window>
