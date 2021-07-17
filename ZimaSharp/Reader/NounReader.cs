@@ -12,15 +12,15 @@ namespace ZimaSharp.Reader
     internal class NounReader : XReader
     {
         Assets.Type type;
-        List<string> argument_list = new();
-        
+        List<NounWrapperReader> argument_list = new();
+
+        string display_noun = "";
 
         public NounReader(Assets.Type type)
         {
             this.type = type;
             head = type.Name;
-            start = '(';
-            end = ')';
+            SetBracket(Assets.Brackets.Type1);
         }
 
         public override bool Execution(string text, ref int point)
@@ -30,33 +30,63 @@ namespace ZimaSharp.Reader
             {
                 return false;
             }
-            ReadAreguments(arguments_text, ref point);
-            //Debug.WriteLine(arguments_text);
+            ReadAreguments(arguments_text, point);
             return true;
         }
 
-        private bool ReadAreguments(string arguments_text, ref int point)
+        public override string GetDisplayStr()
+        {
+            string display_str = "";
+
+            foreach(var argument in argument_list)
+            {
+                display_str += string.Format("{0}の", argument.DisplayStr);
+            }
+            display_str += display_noun;
+            return display_str;
+        }
+
+        private bool ReadAreguments(string arguments_text, int point)
         {
             argument_list.Clear();
             if (arguments_text == "")
             {
-                argument_list.Add(type.Base);
+                display_noun = type.Base;
                 return true;
             }
 
-            List<string> arguments = arguments_text.Split(',').ToList();
+            List<string> arguments = XReader.Split(arguments_text, Assets.Separator.Comma);
+            
             string first_argument = arguments.First();
-            foreach(var noun in type.Nouns)
+            if (arguments.Count > 1 && first_argument == "base")
             {
-                Debug.WriteLine(noun.Key);
-                if(noun.Key == first_argument)
+                display_noun = type.Base;
+            }
+            else
+            {
+                foreach (var noun in type.Nouns)
                 {
-                    argument_list.Add(noun.DisplayStr);
-                    Debug.WriteLine(noun.DisplayStr);
-                    break;
+                    if (noun.Key == first_argument)
+                    {
+                        display_noun = noun.DisplayStr;
+                        break;
+                    }
                 }
             }
-            if (argument_list.Count == 0)
+            
+            foreach(var argument in arguments.Skip(1))
+            {
+                NounWrapperReader nwr = new();
+                int argument_point = 0;
+                
+                if (!nwr.Execution(argument, ref argument_point) || argument_point != argument.Length)
+                {
+                    break;
+                }
+                argument_list.Add(nwr);
+            }
+
+            if (display_noun == "")
             {
                 return false;
             }

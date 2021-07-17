@@ -12,7 +12,13 @@ namespace ZimaSharp.Reader
         protected string head;
         protected char start;
         protected char end;
-        protected string text;
+        protected string text = "";
+
+        public void SetBracket(Assets.Bracket bracket)
+        {
+            start = bracket.Start;
+            end = bracket.End;
+        }
 
         public bool Read(string text, ref int point, out string inner_text)
         {
@@ -20,5 +26,19 @@ namespace ZimaSharp.Reader
         }
 
         public abstract bool Execution(string text, ref int point);
+
+        public abstract string GetDisplayStr();
+
+        public static List<string> Split(string text, char c)
+        {
+            List<(char, char)> bracket_list = new();
+            foreach(var bracket in Assets.Brackets.Self)
+            {
+                bracket_list.Add((bracket.Start, bracket.End));
+            }
+            return TextReader.Split(text, c, bracket_list);
+        }
+
+
     }
 }

@@ -35,10 +35,11 @@ namespace ZimaSharp
 
         public static void Init(string path1, string path2)
         {
-            init = true;
+            
             zimapath = path1;
             funcpath = path2;
             InitZimaDB();
+            init = true;
 
         }
 
@@ -203,10 +204,18 @@ namespace ZimaSharp
             return SQLiteController.SQCon.HelloWorld();
         }
 
-        public bool NounReaderTest(string text, int point)
+        public string NounReaderTest(string text, int point)
         {
+            if (!init)
+            {
+                return "失敗";
+            }
             Reader.NounWrapperReader nwr = new();
-            return nwr.Execution(text, ref point);
+            if(!nwr.Execution(text, ref point))
+            {
+                return "失敗";
+            }
+            return nwr.DisplayStr;
         }
 
 

@@ -7,16 +7,19 @@ using System.Threading.Tasks;
 
 namespace ZimaSharp.Reader
 {
-    class NounWrapperReader : XReader
+    class NounWrapperReader
     {
         Assets.Type type;
+        string display_str = "";
+
+        public string DisplayStr { get { return display_str; } }
 
         public NounWrapperReader()
         {
 
         }
 
-        public override bool Execution(string text, ref int point)
+        public bool Execution(string text, ref int point)
         {
             return ReadNoun(text, ref point);
         }
@@ -31,10 +34,12 @@ namespace ZimaSharp.Reader
                 {
                     this.type = type;
                     point = now_point;
+                    display_str = nr.GetDisplayStr();
                     return true;
                 }
             }
             return false;
         }
+
     }
 }

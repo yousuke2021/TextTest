@@ -22,7 +22,8 @@ namespace ZimaSharp.Reader
 
         public static bool ReadChar(string text, int point, out char c)
         {
-            if(point > text.Length - 1)
+            
+            if(text == null || point > text.Length - 1)
             {
                 c = 'a';
                 return false;
@@ -88,6 +89,68 @@ namespace ZimaSharp.Reader
                 i++;
             }
             return false;
+        }
+
+        public static List<string> Split(string text, char c)
+        {
+            return text.Split(c).ToList();
+        }
+
+        public static List<string> Split(string text, char c, List<(char start, char end)> brackets)
+        {
+            List<string> text_list = new();
+            Dictionary<(char, char), int> counter = new();
+
+            foreach (var bracket in brackets)
+            {
+                counter.Add(bracket, 0);
+            }
+
+            int point = 0;
+            char read_c;
+
+            string tmp_string = "";
+            bool bracket_flag = false;
+
+            while (ReadChar(text, point, out read_c))
+            {
+                if (c == read_c && !bracket_flag)
+                {
+                    text_list.Add(tmp_string);
+                    tmp_string = "";
+                    point++;
+                    continue;
+                }
+
+                tmp_string += read_c;
+                bracket_flag = false;
+                foreach (var bracket in brackets)
+                {
+                    if (bracket.start == read_c)
+                    {
+                        counter[bracket]++;
+                    }
+                    else if (bracket.end == read_c && counter[bracket] > 0)
+                    {
+                        counter[bracket]--;
+                    }
+                    if (counter[bracket] != 0)
+                    {
+                        bracket_flag = true;
+                    }
+                }
+                point++;
+            }
+            if (!string.IsNullOrEmpty(tmp_string))
+            {
+                text_list.Add(tmp_string);
+            }
+            return text_list;
+        }
+
+        public static List<string> Split(string text, char c, params (char start, char end)[] brackets)
+        {
+            return Split(text, c, brackets.ToList());
         }
     }
 }
