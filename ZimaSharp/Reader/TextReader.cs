@@ -56,6 +56,16 @@ namespace ZimaSharp.Reader
             return true;
         }
 
+        public static bool ReadAndCheck(string text1, string text2, ref int point)
+        {
+            if(point >= text1.Length || !text1.Substring(point).StartsWith(text2))
+            {
+                return false;
+            }
+            point += text2.Length;
+            return true;
+        }
+
         public static bool BracketReader(string head, char start, char end, string text, ref int point, out string inner_text)
         {
             int bracket_count = 0;

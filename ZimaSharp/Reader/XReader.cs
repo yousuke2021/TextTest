@@ -10,19 +10,22 @@ namespace ZimaSharp.Reader
     {
         protected Error.ErrorList error_list = new();
         protected string head;
-        protected char start;
-        protected char end;
+        protected Assets.Bracket bracket;
         protected string text = "";
 
         public void SetBracket(Assets.Bracket bracket)
         {
-            start = bracket.Start;
-            end = bracket.End;
+            this.bracket = bracket;
         }
 
         public bool Read(string text, ref int point, out string inner_text)
         {
-            return TextReader.BracketReader(head, start, end, text, ref point, out inner_text);
+            return TextReader.BracketReader(head, bracket.Start, bracket.End, text, ref point, out inner_text);
+        }
+
+        public bool BracketReader(string head, Assets.Bracket bracket, string text, ref int point, out string inner_text)
+        {
+            return TextReader.BracketReader(head, bracket.Start, bracket.End, text, ref point, out inner_text);
         }
 
         public abstract bool Execution(string text, ref int point);

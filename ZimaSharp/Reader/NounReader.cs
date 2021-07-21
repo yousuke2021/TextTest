@@ -11,14 +11,18 @@ namespace ZimaSharp.Reader
 
     internal class NounReader : XReader
     {
-        Assets.Type type;
+        Assets.Type search_type;
+        Assets.Type reality_type;
         List<NounWrapperReader> argument_list = new();
 
         string display_noun = "";
 
+        public Assets.Type Type { get { return reality_type; } }
+
         public NounReader(Assets.Type type)
         {
-            this.type = type;
+            search_type = type;
+            reality_type = search_type;
             head = type.Name;
             SetBracket(Assets.Brackets.Type1);
         }
@@ -30,7 +34,20 @@ namespace ZimaSharp.Reader
             {
                 return false;
             }
-            ReadAreguments(arguments_text, point);
+            if(!ReadArguments(arguments_text, point))
+            {
+                return false;
+            }
+            if (reality_type.Attributes.Count == 0)
+            {
+                return true;
+            }
+
+            AttributeReader ar = new(search_type);
+            if(!ar.Execution(text, ref point))
+            {
+                return true;
+            }
             return true;
         }
 
@@ -46,12 +63,12 @@ namespace ZimaSharp.Reader
             return display_str;
         }
 
-        private bool ReadAreguments(string arguments_text, int point)
+        private bool ReadArguments(string arguments_text, int point)
         {
             argument_list.Clear();
             if (arguments_text == "")
             {
-                display_noun = type.Base;
+                display_noun = search_type.Base;
                 return true;
             }
 
@@ -59,12 +76,12 @@ namespace ZimaSharp.Reader
             
             string first_argument = arguments.First();
             if (arguments.Count > 1 && first_argument == "base")
-            {
-                display_noun = type.Base;
+            { 
+                display_noun = search_type.Base;
             }
             else
             {
-                foreach (var noun in type.Nouns)
+                foreach (var noun in search_type.Nouns)
                 {
                     if (noun.Key == first_argument)
                     {
@@ -93,5 +110,6 @@ namespace ZimaSharp.Reader
 
             return true;
         }
+
     }
 }
