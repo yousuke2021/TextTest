@@ -12,6 +12,12 @@ namespace ZimaSharp.Error
 
         public List<Error> Self { get { return new List<Error>(errors); } }
 
+        public ErrorList Clone { 
+            get { ErrorList clone = new ErrorList();
+                clone.MergeErrors(this); 
+                return clone; } 
+        }
+
         public bool Exist { get { return (errors.Count > 0); } }
 
 
@@ -27,14 +33,22 @@ namespace ZimaSharp.Error
 
         public void MergeErrors(ErrorList error_list)
         {
-            this.errors.AddRange(error_list.Self);
+            errors.AddRange(error_list.Self);
+        }
+
+        public void MergeErrors(ErrorList error_list, int diff)
+        {
+            foreach(var error in error_list.Self)
+            {
+                errors.Add(new Error(error.Index + diff, error.Message));
+            }
         }
 
         public string GetErrorMessage()
         {
             string message = "";
-            var sort_errors = errors.OrderBy(x => x.Index);
-            foreach(var error in sort_errors)
+
+            foreach(var error in errors.OrderBy(x => x.Index))
             {
                 message += string.Format("[{0,3}]：{1}\n", error.Index, error.Message);
             }

@@ -13,6 +13,7 @@ namespace ZimaSharp.Reader
         protected Assets.Bracket bracket;
         protected string text = "";
 
+
         public void SetBracket(Assets.Bracket bracket)
         {
             this.bracket = bracket;

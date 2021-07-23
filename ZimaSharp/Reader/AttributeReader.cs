@@ -38,7 +38,10 @@ namespace ZimaSharp.Reader
         public override string GetDisplayStr()
         {
             string display_str = "";
+            for(int i = 0; i < attribute_list.Count; i++)
+            {
 
+            }
             return display_str;
         }
 
@@ -54,10 +57,10 @@ namespace ZimaSharp.Reader
 
         private bool ReadAttribute(string attribute)
         {
-            foreach (var attribute_name in type.Attributes.Select(x => x.Name))
+            foreach (var search_attribute in type.Attributes)
             {
                 int point = 0;
-                if(!TextReader.ReadAndCheck(attribute, string.Format("{0}=", attribute_name), ref point))
+                if(!TextReader.ReadAndCheck(attribute, string.Format("{0}=", search_attribute.Name), ref point))
                 {
                     continue;
                 }
@@ -66,7 +69,7 @@ namespace ZimaSharp.Reader
                 {
                     break;
                 }
-                Debug.WriteLine(nwr.DisplayStr);
+                attribute_list.Add(search_attribute.DisplayStr, nwr);
                 break;
             }
             return false;
