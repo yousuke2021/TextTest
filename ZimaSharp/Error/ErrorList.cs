@@ -31,6 +31,11 @@ namespace ZimaSharp.Error
             errors.Add(error);
         }
 
+        public void AddError(Error error, int index)
+        {
+            errors.Add(error.SetIndex(index));
+        }
+
         public void MergeErrors(ErrorList error_list)
         {
             errors.AddRange(error_list.Self);

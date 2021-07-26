@@ -38,9 +38,18 @@ namespace ZimaSharp.Reader
         public override string GetDisplayStr()
         {
             string display_str = "";
-            for(int i = 0; i < attribute_list.Count; i++)
+            int count = 0;
+            foreach(var attribute in attribute_list)
             {
-
+                if(count < attribute_list.Count - 1)
+                {
+                    display_str += string.Format("{0}が{1}で ", attribute.Key, attribute.Value.DisplayStr);
+                }
+                else
+                {
+                    display_str += string.Format("{0}が{1}", attribute.Key, attribute.Value.DisplayStr);
+                }
+                count++;
             }
             return display_str;
         }
@@ -69,7 +78,11 @@ namespace ZimaSharp.Reader
                 {
                     break;
                 }
-                attribute_list.Add(search_attribute.DisplayStr, nwr);
+                if (!attribute_list.ContainsKey(search_attribute.DisplayStr))
+                {
+                    attribute_list.Add(search_attribute.DisplayStr, nwr);
+                }
+                
                 break;
             }
             return false;

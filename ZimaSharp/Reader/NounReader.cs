@@ -11,9 +11,15 @@ namespace ZimaSharp.Reader
 
     internal class NounReader : XReader
     {
+        static class ERRORS
+        {
+            static Error.Error ARGUMENTS_ERROR = new("引数が不正です");
+        }
+
         Assets.Type search_type;
         Assets.Type reality_type;
         List<NounWrapperReader> argument_list = new();
+        AttributeReader ar = null;
 
         string display_noun = "";
 
@@ -48,6 +54,8 @@ namespace ZimaSharp.Reader
             {
                 return true;
             }
+            this.ar = ar;
+
             return true;
         }
 
@@ -58,6 +66,10 @@ namespace ZimaSharp.Reader
             foreach(var argument in argument_list)
             {
                 display_str += string.Format("{0}の", argument.DisplayStr);
+            }
+            if (ar != null)
+            {
+                display_str += string.Format("（{0}）のような", ar.GetDisplayStr());
             }
             display_str += display_noun;
             return display_str;
