@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace ZimaSharp.Reader
 {
-    internal abstract class XReader
+    internal abstract class XReader : YReader
     {
-        protected Error.ErrorList error_list = new();
         protected string head;
         protected Assets.Bracket bracket;
         protected string text = "";
-
 
         public void SetBracket(Assets.Bracket bracket)
         {
@@ -29,9 +27,9 @@ namespace ZimaSharp.Reader
             return TextReader.BracketReader(head, bracket.Start, bracket.End, text, ref point, out inner_text);
         }
 
-        public abstract bool Execution(string text, ref int point);
+        public abstract override bool Execution(string text, ref int point);
 
-        public abstract string GetDisplayStr();
+        public abstract override string GetDisplayStr();
 
         public static List<string> Split(string text, char c)
         {

@@ -215,7 +215,7 @@ namespace ZimaSharp
             {
                 return "失敗";
             }
-            return nwr.DisplayStr;
+            return nwr.GetDisplayStr();
         }
 
 

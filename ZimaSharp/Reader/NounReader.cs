@@ -13,7 +13,8 @@ namespace ZimaSharp.Reader
     {
         static class ERRORS
         {
-            static Error.Error ARGUMENTS_ERROR = new("引数が不正です");
+            internal static Error.Error ARGUMENTS_ERROR = new("引数が不正です");
+            internal static Error.Error ATTRIBUTES_ERROR = new("属性が不正です");
         }
 
         Assets.Type search_type;
@@ -50,10 +51,17 @@ namespace ZimaSharp.Reader
             }
 
             AttributeReader ar = new(search_type);
+            int ar_point = point;
             if(!ar.Execution(text, ref point))
             {
+                if (ar.Errors.Exist)
+                {
+                    error_list.AddError(ERRORS.ATTRIBUTES_ERROR, ar_point);
+                    error_list.MergeErrors(ar.Errors, ar_point);
+                }
                 return true;
             }
+            
             this.ar = ar;
 
             return true;
@@ -65,7 +73,7 @@ namespace ZimaSharp.Reader
 
             foreach(var argument in argument_list)
             {
-                display_str += string.Format("{0}の", argument.DisplayStr);
+                display_str += string.Format("{0}の", argument.GetDisplayStr());
             }
             if (ar != null)
             {

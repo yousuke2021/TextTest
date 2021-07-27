@@ -7,21 +7,24 @@ using System.Threading.Tasks;
 
 namespace ZimaSharp.Reader
 {
-    class NounWrapperReader
+    class NounWrapperReader : YReader
     {
         Assets.Type type;
         string display_str = "";
-
-        public string DisplayStr { get { return display_str; } }
 
         public NounWrapperReader()
         {
 
         }
 
-        public bool Execution(string text, ref int point)
+        public override bool Execution(string text, ref int point)
         {
             return ReadNoun(text, ref point);
+        }
+
+        public override string GetDisplayStr()
+        {
+            return display_str;
         }
 
         public bool ReadNoun(string text, ref int point)
