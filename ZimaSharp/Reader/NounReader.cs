@@ -56,8 +56,8 @@ namespace ZimaSharp.Reader
             {
                 if (ar.Errors.Exist)
                 {
-                    error_list.AddError(ERRORS.ATTRIBUTES_ERROR, ar_point);
                     error_list.MergeErrors(ar.Errors, ar_point);
+                    return false;
                 }
                 return true;
             }

@@ -33,7 +33,7 @@ namespace ZimaSharp.Reader
             foreach(var type in ZimaSharpConverter.Types)
             {
                 NounReader nr = new(type);
-                if(nr.Execution(text, ref now_point))
+                if(ReadAndMerge(nr, text, ref now_point))
                 {
                     this.type = type;
                     point = now_point;
